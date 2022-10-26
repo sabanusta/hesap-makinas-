@@ -1,0 +1,51 @@
+package Ders01;
+
+import java.util.Scanner;
+
+public class hesap {
+    public static void main(String[] args) {
+
+        int num1, num2, secim;
+        Scanner scan2 = new Scanner(System.in);
+        System.out.println("Secimizi Yapınız" + ("toplama:1") + ("çıkarma:2") + ("çarpma:3") + (" bölme:4"));
+        secim = scan2.nextInt();
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("1. sayıyı giriniz");
+        num1 = scan.nextInt();
+
+        Scanner scan1 = new Scanner(System.in);
+        System.out.println("2. sayıyı giriniz");
+        num2 = scan1.nextInt();
+
+
+
+        switch (secim){
+            case 1:
+                System.out.println(num1+num2);
+                break;
+
+
+            case 2:
+                System.out.println(num1-num2);
+                break;
+
+            case 3:
+                System.out.println(num1*num2);
+                break;
+
+            case 4:
+                switch (num2){
+                    case 0:
+                        System.out.println("Sayılar sıfıra bolunmez ");
+                        break;
+
+                }
+                System.out.println((float)num1/num2);
+
+                break;
+
+            default:
+                System.out.println("Hatalı seçim yaptınız");
+                break;
+        }
